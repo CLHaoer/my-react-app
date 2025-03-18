@@ -30,11 +30,11 @@ jobs:
         run: npm run build
       # 上传打包文件到远程服务器
       - name: 上传文件到远程服务器
-        uses: appleboy/scp-action@v0.1.7
+        uses: easingthemes/ssh-deploy@main
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PAW }}
+          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
-          source: "./dist/*"
-          target: "/www/wwwroot/dist"
+          source: "dist"
+          target: "/www/wwwroot"

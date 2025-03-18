@@ -33,7 +33,8 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         with:
           REMOTE_HOST: ${{ secrets.SERVER_HOST }}
-          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          ARGS: '-avzr --delete'
+          REMOTE_USER: 'root'
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           source: "dist"

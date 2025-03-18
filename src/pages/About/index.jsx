@@ -71,9 +71,9 @@ const About = () => {
           
           <h2>联系我们</h2>
           <div className="contact-info">
-            <p><strong>邮箱：</strong> contact@example.com</p>
-            <p><strong>地址：</strong> 中国北京市朝阳区科技园 A 座 101 室</p>
-            <p><strong>电话：</strong> +86 10 1234 5678</p>
+            <p><strong>邮箱：</strong> clhaoer@163.com</p>
+            <p><strong>地址：</strong> 中国 四川省 成都市 天府五街软件园G区</p>
+            <p><strong>电话：</strong> +86 820 820 8820</p>
           </div>
         </div>
       </section>

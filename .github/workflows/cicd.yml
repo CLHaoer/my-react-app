@@ -27,9 +27,11 @@ jobs:
       # 安装依赖
       - name: 安装依赖
         run: npm install
+        working-directory: ./my-react-app <!-- Ensure this path is correct -->
       # 打包
       - name: 打包
         run: npm run build
+        working-directory: ./my-react-app <!-- Ensure this path is correct -->
       # 上传打包文件到远程服务器
       - name: 上传文件到远程服务器
         uses: appleboy/scp-action@v0.1.7
@@ -39,4 +41,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           source: "./dist/*"
-          target: "/www/wwwroot/114.55.146.170/dist"
+          target: "/www/wwwroot/dist"

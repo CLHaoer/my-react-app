@@ -32,9 +32,9 @@ jobs:
       - name: 上传文件到远程服务器
         uses: easingthemes/ssh-deploy@main
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: '-avzr --delete'
-          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: 'root'
-          source: 'dist'
-          target: '/www/wwwroot'
+          SOURCE: 'dist'
+          TARGET: '/www/wwwroot'

@@ -1,0 +1,32 @@
+.not-found {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+
+  h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1890ff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0c77e6;
+    }
+  }
+} 

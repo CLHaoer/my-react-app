@@ -1,0 +1,221 @@
+.article-detail {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  // 加载状态和错误状态
+  &-loading, &-error {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 16px;
+    color: #666;
+  }
+
+  &-error {
+    color: #f5222d;
+  }
+
+  // 文章头部
+  .article-header {
+    margin-bottom: 24px;
+    
+    .article-title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #666;
+      font-size: 14px;
+      
+      .article-author, .article-date, .article-category {
+        display: inline-flex;
+        align-items: center;
+      }
+      
+      .article-tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        
+        .tag {
+          background-color: #f0f2f5;
+          color: #1890ff;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  // 文章封面
+  .article-cover {
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  // 文章内容
+  .article-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 40px;
+    
+    p {
+      margin-bottom: 16px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+    
+    a {
+      color: #1890ff;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    img {
+      max-width: 100%;
+      margin: 16px 0;
+      border-radius: 4px;
+    }
+    
+    blockquote {
+      margin: 16px 0;
+      padding: 8px 16px;
+      border-left: 4px solid #1890ff;
+      background-color: #f9f9f9;
+      color: #666;
+    }
+    
+    code {
+      background-color: #f0f2f5;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    
+    pre {
+      background-color: #f0f2f5;
+      padding: 16px;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 16px 0;
+      
+      code {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+  }
+
+  // 文章底部
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid #f0f0f0;
+    
+    .article-actions {
+      display: flex;
+      gap: 16px;
+      
+      .btn-like, .btn-share {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        transition: color 0.3s;
+        
+        &:hover {
+          color: #1890ff;
+        }
+        
+        .icon {
+          font-size: 20px;
+        }
+      }
+    }
+    
+    .article-navigation {
+      .btn-back {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #f0f2f5;
+        color: #666;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: all 0.3s;
+        
+        &:hover {
+          background-color: #e6f7ff;
+          color: #1890ff;
+        }
+      }
+    }
+  }
+
+  // 评论区
+  .article-comments {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+    
+    h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 24px;
+    }
+    
+    .comments-list {
+      .comment-item {
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        margin-bottom: 16px;
+        
+        .comment-author {
+          font-weight: 500;
+          color: #333;
+          margin-bottom: 4px;
+        }
+        
+        .comment-date {
+          font-size: 12px;
+          color: #999;
+          margin-bottom: 8px;
+        }
+        
+        .comment-content {
+          color: #666;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+} 

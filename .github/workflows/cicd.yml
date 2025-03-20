@@ -30,11 +30,18 @@ jobs:
         run: npm run build
       # 上传打包文件到远程服务器
       - name: 上传文件到远程服务器
-        uses: easingthemes/ssh-deploy@v4.1.10
+        uses: appleboy/scp-action@v0.1.7
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          ARGS: '-avzr --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: 'root'
-          SOURCE: 'dist'
-          TARGET: '/www/wwwroot'
+          host: ${{ secrets.REMOTE_HOST }}
+          username: "root"
+          key: ${{ secrets.PRIVATE_KEY }}
+          source: "dist/*"
+          target: "/www/wwwroot"
+        # uses: easingthemes/ssh-deploy@v4.1.10
+        # with:
+        #   SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        #   ARGS: '-avzr --delete'
+        #   REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        #   REMOTE_USER: 'root'
+        #   SOURCE: 'dist/*'
+        #   TARGET: '/www/wwwroot'

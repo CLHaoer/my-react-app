@@ -21,7 +21,7 @@ jobs:
         # 使用action库 actions/setup-node 安装node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 18.20.2
       # 安装依赖
       - name: 安装依赖
         run: npm install
@@ -30,7 +30,7 @@ jobs:
         run: npm run build
       # 上传打包文件到远程服务器
       - name: 上传文件到远程服务器
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@v4.1.10
         with:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: '-avzr --delete'

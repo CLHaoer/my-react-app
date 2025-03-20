@@ -21,7 +21,7 @@ jobs:
         # 使用action库 actions/setup-node 安装node
         uses: actions/setup-node@v4
         with:
-          node-version: 18.20.2
+          node-version: 18
       # 安装依赖
       - name: 安装依赖
         run: npm install

@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Articles from '../pages/Articles';
 import ArticleDetail from '../pages/ArticleDetail';
+import AI from '../pages/AI';
 import NotFound from '../pages/NotFound';
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'articles/:id',
         element: <ArticleDetail />,
+      },
+      {
+        path: 'ai',
+        element: <AI />,
       },
       {
         path: '*',

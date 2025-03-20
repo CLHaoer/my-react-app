@@ -41,9 +41,9 @@ instance.interceptors.response.use(
       // 可以在这里处理特定的错误码，例如token失效等
       if (res.code === 401) {
         // token过期或未登录
-        localStorage.removeItem('token');
-        // 可以跳转到登录页面
-        window.location.href = '/login';
+        // localStorage.removeItem('token');
+        // // 可以跳转到登录页面
+        // window.location.href = '/login';
       }
       return Promise.reject(new Error(res.message || '未知错误'));
     }
@@ -67,9 +67,9 @@ instance.interceptors.response.use(
           break;
         case 401:
           message = '未授权，请登录';
-          localStorage.removeItem('token');
-          // 可以跳转到登录页面
-          window.location.href = '/login';
+          // localStorage.removeItem('token');
+          // // 可以跳转到登录页面
+          // window.location.href = '/login';
           break;
         case 403:
           message = '拒绝访问';

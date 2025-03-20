@@ -9,6 +9,7 @@ const DefaultLayout = () => {
   const navItems = [
     { path: '/', label: '首页' },
     { path: '/articles', label: '文章' },
+    { path: '/ai', label: 'AI助手' },
     { path: '/about', label: '关于' },
   ];
 
